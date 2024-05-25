@@ -1,0 +1,56 @@
+name: Render a CV
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  rendercv:
+    name: RenderCV
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            input_files:
+              - '**/*.j2.tex'
+              - '**/*.j2.md'
+              - '*_CV.yaml'
+      - uses: actions/setup-python@v5
+        if: steps.changes.outputs.input_files == 'true'
+        with:
+          python-version: "3.12"
+      - name: Install RenderCV
+        if: steps.changes.outputs.input_files == 'true'
+        run: |
+          pip install -r requirements.txt
+      - name: RenderCV
+        if: steps.changes.outputs.input_files == 'true'
+        run: |
+          cv_file=$(find .  -maxdepth 1 -type f -name "*_CV.yaml" | head -n 1)
+          if [ -z "$cv_file" ]; then
+            echo "No RenderCV file found!"
+            exit 1
+          fi
+          rendercv render $cv_file --pdf-path ${cv_file%.yaml}.pdf --markdown-path README.md
+      - name: Push the changes
+        if: steps.changes.outputs.input_files == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Render the latest CV"
+          git push
+          
+      - name: Upload rendercv_output as an artifact
+        if: steps.changes.outputs.input_files == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: RenderCV Output
+          path: rendercv_output

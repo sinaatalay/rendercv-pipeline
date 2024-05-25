@@ -1,0 +1,25 @@
+name: Release a CV
+
+on:
+  push:
+    tags:
+      - "*" # Any tag pushed to the repository
+      
+permissions:
+  contents: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            *_CV.pdf
+            *_CV.yaml
+          generate_release_notes: true
+          make_latest: true
