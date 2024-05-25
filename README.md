@@ -19,7 +19,7 @@ Picture this:
 **Some tips**
 
 1.  Learn more about [RenderCV](https://github.com/sinaatalay/rendercv) to understand what you can do with this tool.
-2.  Edit and preview your CV in your browser by creating a codespace. Click the <> **Code** button, then click the **Codespaces** tab, and then click **Create codespace on main**. The environment will be ready for RenderCV usage.
+2.  Edit and preview your CV in your browser without installing anything by creating a codespace. Click the <> **Code** button, then click the **Codespaces** tab, and then click **Create codespace on main**. The environment will be ready for RenderCV usage.
 
 <!-- Remove above -->
 # John Doe's CV
