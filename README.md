@@ -37,89 +37,90 @@ Picture this:
 - GitHub: [yourusername](https://github.com/yourusername)
 
 
-# Welcome To Rendercv!
+# Welcome To RenderCV!
 
-[RenderCV](https://github.com/sinaatalay/rendercv) is a LaTeX CV/resume framework. It allows you to create a high-quality CV as a PDF from a YAML file with **full Markdown syntax support** and **complete control over the LaTeX code**.
+[RenderCV](https://github.com/sinaatalay/rendercv) is a LaTeX-based CV/resume framework. It allows you to create a high-quality CV or resume as a PDF file from a YAML file, with **full Markdown syntax support** and **complete control over the LaTeX code**.
 
-A substantial part of the content is taken from [here](https://www.careercup.com/resume), where a *clean and tidy CV* pattern is proposed by **Gayle L. McDowell**.
+The boilerplate content is taken from [here](https://github.com/dnl-blkv/mcdowell-cv), where a *clean and tidy CV* pattern is proposed by **[Gayle Laakmann McDowell](https://www.gayle.com/)**.
 
 # Quick Guide
 
 - Each section title is arbitrary, and each section contains a list of entries.
-- There are seven different entry types: *BulletEntry*, *TextEntry*, *EducationEntry*, *ExperienceEntry*, *NormalEntry*, *PublicationEntry*, and *OneLineEntry*.
+- There are 7 unique entry types: *BulletEntry*, *TextEntry*, *EducationEntry*, *ExperienceEntry*, *NormalEntry*, *PublicationEntry*, and *OneLineEntry*.
 - Select a section title, pick an entry type, and start writing your section!
-- [Here](https://docs.rendercv.com/user_guide/), you can find a comprehensive user guide.
+- [Here](https://docs.rendercv.com/user_guide/), you can find a comprehensive user guide for RenderCV.
 # Education
 
 ## University of Pennsylvania, BS in Computer Science
 
-- Sept. 2000 to May 2005
+- Sept 2000 – May 2005
 - GPA: 3.9/4.0 ([Transcript](https://example.com))
-- **Coursework:** Software Foundations, Computer Architecture, Algorithms, Artificial Intelligence, Comparison of Learning Algorithms, Computational Theory.
+- **Coursework:** Computer Architecture, Artificial Intelligence, Comparison of Learning Algorithms, Computational Theory
 
 # Experience
 
-## Apple Computer, Software Engineer, Intern
+## Apple, Software Engineer
 
-- June 2004 to Aug. 2004
-- CA, USA
-- Reduced time to render the user's buddy list by 75% by implementing a prediction algorithm.
-- Implemented iChat integration with OS X Spotlight Search by creating a tool that extracts metadata from saved chat transcripts and provides metadata to a system-wide search database.
-- Redesigned chat file format and implemented backward compatibility for search.
+- June 2005 – Aug 2007
+- Cupertino, CA
+- Reduced time to render the user's buddy list by 75% by implementing a prediction algorithm
+- Implemented iChat integration with OS X Spotlight Search by creating a tool to extract metadata from saved chat transcripts and provide metadata to a system-wide search database
+- Redesigned chat file format and implemented backward compatibility for search
 
-## Microsoft Corporation, Lead Student Ambassador
+## Microsoft, Lead Student Ambassador
 
-- Sept. 2003 to Apr. 2005
-- WA, USA
-- Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10 - 15 Student Ambassadors.
-- Created and taught a computer science course, CSE 099: Software Design and Development.
+- Sept 2003 – Apr 2005
+- Redmond, WA
+- Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10-15 Student Ambassadors
+- Created and taught a computer science course, CSE 099: Software Design and Development
 
 ## University of Pennsylvania, Head Teaching Assistant
 
-- Oct. 2001 to May 2005
-- PA, USA
-- Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows.
-- Created a service to provide gradient across VS and VS add-ins. Optimized service via caching.
+- Oct 2001 – May 2003
+- Philadelphia, PA
+- Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows
+- Created a service to provide gradient across VS and VS add-ins, optimized its performance via caching
 - Programmer Productivity Research Center (Summers 2001, 2002)
-- Built app to compute the similarity of all methods in a code base, reduced time from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \log n)$. 
-- Created a test case generation tool that creates random XML docs from XML Schema.
+- Built an app to compute the similarity of all methods in a code base, reducing the time from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \log n)$
+- Created a test case generation tool that creates random XML docs from XML Schema
 
-## Microsoft Corporation, Software Design Engineer, Intern
+## Microsoft, Software Engineer, Intern
 
-- June 2003 to Aug. 2003
-- WA, USA
-- Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10 - 15 Student Ambassadors.
+- June 2003 – Aug 2003
+- Redmond, WA
+- Automated the extraction and processing of large datasets from legacy systems using SQL and Perl scripts
 
 # Publications
 
 ## Magneto-Thermal Thin Shell Approximation for 3D Finite Element Analysis of No-Insulation Coils ([10.1109/TASC.2023.3340648](https://doi.org/10.1109/TASC.2023.3340648))
-- Jan. 2004 - Albert Smith, ***John Doe***, Jane Derry, Harry Tom, Frodo Baggins
+- Jan 2004
+- Albert Smith, ***John Doe***, Jane Derry, Harry Tom, Frodo Baggins
 
 # Projects
 
 ## Multi-User Drawing Tool
 
-- 2004
-- Developed an electronic classroom where multiple users can view and simultaneously draw on a "chalkboard" with each person's edits synchronized.
-- Used C++ and MFC.
+- [github.com/name/repo](https://github.com/sinaatalay/rendercv)
+- Developed an electronic classroom where multiple users can view and simultaneously draw on a "chalkboard" with each person's edits synchronized
+- Tools Used: C++, MFC
 
 ## Synchronized Calendar
 
-- 2003 to 2004
-- Developed a desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users.
-- Used C#.NET, SQL, and XML.
+- [github.com/name/repo](https://github.com/sinaatalay/rendercv)
+- Developed a desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users
+- Tools Used: C#, .NET, SQL, XML
 
 ## Operating System
 
 - 2002
-- Developed a UNIX-style OS with a scheduler, file system, text editor, and calculator.
-- Used C.
+- Developed a UNIX-style OS with a scheduler, file system, text editor, and calculator
+- Tools Used: C
 
 # Additional Experience And Awards
 
-- Instructor (2003 - 2005): Taught two full-credit Computer Science courses.
-- Third Prize, Senior Design Projects: Awarded 3rd prize for a synchronized calendar project out of 100 projects.
+- Instructor (2003-2005): Taught 2 full-credit computer science courses
+- Third Prize, Senior Design Project: Awarded 3rd prize for a synchronized calendar project out of 100 entries
 # Technologies
 
-- Languages: C++, C, Java, Objective-C, C#.NET, SQL, JavaScript
-- Software: Visual Studio, Microsoft SQL Server, Eclipse, XCode, Interface Builder
+- Languages: C++, C, Java, Objective-C, C#, SQL, JavaScript
+- Software: .NET, Microsoft SQL Server, XCode, Interface Builder

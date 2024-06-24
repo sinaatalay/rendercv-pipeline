@@ -21,6 +21,7 @@
 \usepackage[
     pdftitle={John Doe's CV},
     pdfauthor={John Doe},
+    pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     urlcolor=primaryColor
 ]{hyperref} % for links, metadata and bookmarks
@@ -164,10 +165,17 @@
 \let\hrefWithoutArrow\href
 
 % new command for external links:
-\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\mbox{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}}
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
 
 
 \begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
     \placelastupdatedtext
     \begin{header}
         \fontsize{30 pt}{30 pt}
@@ -176,36 +184,45 @@
         \vspace{0.3 cm}
 
         \normalsize
-        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Your Location}
-        \kern 0.5 cm
-        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}youremail@yourdomain.com}}
-        \kern 0.5 cm
-        \mbox{\hrefWithoutArrow{tel:+90-541-999-99-99}{{\footnotesize\faPhone*}\hspace*{0.13cm}+90 541 999 99 99}}
-        \kern 0.5 cm
-        \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{{\footnotesize\faLink}\hspace*{0.13cm}yourwebsite.com}}
-        \kern 0.5 cm
-        \mbox{\hrefWithoutArrow{https://linkedin.com/in/yourusername}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}yourusername}}
-        \kern 0.5 cm
-        \mbox{\hrefWithoutArrow{https://github.com/yourusername}{{\footnotesize\faGithub}\hspace*{0.13cm}yourusername}}
-        \kern 0.5 cm
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Your Location}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}youremail@yourdomain.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+90-541-999-99-99}{{\footnotesize\faPhone*}\hspace*{0.13cm}+90 541 999 99 99}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{{\footnotesize\faLink}\hspace*{0.13cm}yourwebsite.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/yourusername}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}yourusername}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/yourusername}{{\footnotesize\faGithub}\hspace*{0.13cm}yourusername}}%
     \end{header}
 
     \vspace{0.3 cm - 0.3 cm}
 
 
-    \section{Welcome To Rendercv!}
+    \section{Welcome To RenderCV!}
 
 
 
         
         \begin{onecolentry}
-            \href{https://github.com/sinaatalay/rendercv}{RenderCV} is a LaTeX CV/resume framework. It allows you to create a high-quality CV as a PDF from a YAML file with \textbf{full Markdown syntax support} and \textbf{complete control over the LaTeX code}.
+            \href{https://github.com/sinaatalay/rendercv}{RenderCV} is a LaTeX-based CV/resume framework. It allows you to create a high-quality CV or resume as a PDF file from a YAML file, with \textbf{full Markdown syntax support} and \textbf{complete control over the LaTeX code}.
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-            A substantial part of the content is taken from \href{https://www.careercup.com/resume}{here}, where a \textit{clean and tidy CV} pattern is proposed by \textbf{Gayle L. McDowell}.
+            The boilerplate content is taken from \href{https://github.com/dnl-blkv/mcdowell-cv}{here}, where a \textit{clean and tidy CV} pattern is proposed by \textbf{\href{https://www.gayle.com/}{Gayle Laakmann McDowell}}.
         \end{onecolentry}
 
 
@@ -218,11 +235,11 @@
 
         \item Each section title is arbitrary, and each section contains a list of entries.
 
-        \item There are seven different entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
+        \item There are 7 unique entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
 
         \item Select a section title, pick an entry type, and start writing your section!
 
-        \item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide.
+        \item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide for RenderCV.
 
 
         \end{highlightsforbulletentries}
@@ -234,12 +251,12 @@
 
         
         \begin{threecolentry}{\textbf{BS}}{
-            Sept. 2000 to May 2005
+            Sept 2000 – May 2005
         }
             \textbf{University of Pennsylvania}, Computer Science
             \begin{highlights}
                 \item GPA: 3.9/4.0 (\href{https://example.com}{Transcript})
-                \item \textbf{Coursework:} Software Foundations, Computer Architecture, Algorithms, Artificial Intelligence, Comparison of Learning Algorithms, Computational Theory.
+                \item \textbf{Coursework:} Computer Architecture, Artificial Intelligence, Comparison of Learning Algorithms, Computational Theory
             \end{highlights}
         \end{threecolentry}
 
@@ -251,17 +268,17 @@
 
         
         \begin{twocolentry}{
-            CA, USA
+            Cupertino, CA
 
-        June 2004 to Aug. 2004
+        June 2005 – Aug 2007
 
-        2 months
+        2 years 2 months
         }
-            \textbf{Apple Computer}, Software Engineer, Intern
+            \textbf{Apple}, Software Engineer
             \begin{highlights}
-                \item Reduced time to render the user's buddy list by 75\% by implementing a prediction algorithm.
-                \item Implemented iChat integration with OS X Spotlight Search by creating a tool that extracts metadata from saved chat transcripts and provides metadata to a system-wide search database.
-                \item Redesigned chat file format and implemented backward compatibility for search.
+                \item Reduced time to render the user's buddy list by 75\% by implementing a prediction algorithm
+                \item Implemented iChat integration with OS X Spotlight Search by creating a tool to extract metadata from saved chat transcripts and provide metadata to a system-wide search database
+                \item Redesigned chat file format and implemented backward compatibility for search
             \end{highlights}
         \end{twocolentry}
 
@@ -269,16 +286,16 @@
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-            WA, USA
+            Redmond, WA
 
-        Sept. 2003 to Apr. 2005
+        Sept 2003 – Apr 2005
 
         1 year 7 months
         }
-            \textbf{Microsoft Corporation}, Lead Student Ambassador
+            \textbf{Microsoft}, Lead Student Ambassador
             \begin{highlights}
-                \item Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10 - 15 Student Ambassadors.
-                \item Created and taught a computer science course, CSE 099: Software Design and Development.
+                \item Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10-15 Student Ambassadors
+                \item Created and taught a computer science course, CSE 099: Software Design and Development
             \end{highlights}
         \end{twocolentry}
 
@@ -286,19 +303,19 @@
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-            PA, USA
+            Philadelphia, PA
 
-        Oct. 2001 to May 2005
+        Oct 2001 – May 2003
 
-        3 years 7 months
+        1 year 7 months
         }
             \textbf{University of Pennsylvania}, Head Teaching Assistant
             \begin{highlights}
-                \item Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows.
-                \item Created a service to provide gradient across VS and VS add-ins. Optimized service via caching.
+                \item Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows
+                \item Created a service to provide gradient across VS and VS add-ins, optimized its performance via caching
                 \item Programmer Productivity Research Center (Summers 2001, 2002)
-                \item Built app to compute the similarity of all methods in a code base, reduced time from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \log n)$. 
-                \item Created a test case generation tool that creates random XML docs from XML Schema.
+                \item Built an app to compute the similarity of all methods in a code base, reducing the time from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \log n)$
+                \item Created a test case generation tool that creates random XML docs from XML Schema
             \end{highlights}
         \end{twocolentry}
 
@@ -306,15 +323,15 @@
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-            WA, USA
+            Redmond, WA
 
-        June 2003 to Aug. 2003
+        June 2003 – Aug 2003
 
         2 months
         }
-            \textbf{Microsoft Corporation}, Software Design Engineer, Intern
+            \textbf{Microsoft}, Software Engineer, Intern
             \begin{highlights}
-                \item Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10 - 15 Student Ambassadors.
+                \item Automated the extraction and processing of large datasets from legacy systems using SQL and Perl scripts
             \end{highlights}
         \end{twocolentry}
 
@@ -328,7 +345,7 @@
         
         \begin{samepage}
             \begin{twocolentry}{
-                Jan. 2004
+                Jan 2004
             }
                 \textbf{Magneto-Thermal Thin Shell Approximation for 3D Finite Element Analysis of No-Insulation Coils}
 
@@ -337,7 +354,8 @@
                 \mbox{Albert Smith}, \mbox{\textbf{\textit{John Doe}}}, \mbox{Jane Derry}, \mbox{Harry Tom}, \mbox{Frodo Baggins}
                 \vspace{0.10 cm}
 
-        \href{https://doi.org/10.1109/TASC.2023.3340648}{10.1109/TASC.2023.3340648}    \end{twocolentry}
+        \href{https://doi.org/10.1109/TASC.2023.3340648}{10.1109/TASC.2023.3340648}
+            \end{twocolentry}
         \end{samepage}
 
 
@@ -348,12 +366,12 @@
 
         
         \begin{twocolentry}{
-            2004
+            \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
         }
             \textbf{Multi-User Drawing Tool}
             \begin{highlights}
-                \item Developed an electronic classroom where multiple users can view and simultaneously draw on a "chalkboard" with each person's edits synchronized.
-                \item Used C++ and MFC.
+                \item Developed an electronic classroom where multiple users can view and simultaneously draw on a "chalkboard" with each person's edits synchronized
+                \item Tools Used: C++, MFC
             \end{highlights}
         \end{twocolentry}
 
@@ -361,12 +379,12 @@
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-            2003 to 2004
+            \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
         }
             \textbf{Synchronized Calendar}
             \begin{highlights}
-                \item Developed a desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users.
-                \item Used C\#.NET, SQL, and XML.
+                \item Developed a desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users
+                \item Tools Used: C\#, .NET, SQL, XML
             \end{highlights}
         \end{twocolentry}
 
@@ -378,8 +396,8 @@
         }
             \textbf{Operating System}
             \begin{highlights}
-                \item Developed a UNIX-style OS with a scheduler, file system, text editor, and calculator.
-                \item Used C.
+                \item Developed a UNIX-style OS with a scheduler, file system, text editor, and calculator
+                \item Tools Used: C
             \end{highlights}
         \end{twocolentry}
 
@@ -392,13 +410,13 @@
 
         
         \begin{onecolentry}
-            \textbf{Instructor (2003 - 2005):} Taught two full-credit Computer Science courses.
+            \textbf{Instructor (2003-2005):} Taught 2 full-credit computer science courses
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-            \textbf{Third Prize, Senior Design Projects:} Awarded 3rd prize for a synchronized calendar project out of 100 projects.
+            \textbf{Third Prize, Senior Design Project:} Awarded 3rd prize for a synchronized calendar project out of 100 entries
         \end{onecolentry}
 
 
@@ -409,13 +427,13 @@
 
         
         \begin{onecolentry}
-            \textbf{Languages:} C++, C, Java, Objective-C, C\#.NET, SQL, JavaScript
+            \textbf{Languages:} C++, C, Java, Objective-C, C\#, SQL, JavaScript
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-            \textbf{Software:} Visual Studio, Microsoft SQL Server, Eclipse, XCode, Interface Builder
+            \textbf{Software:} .NET, Microsoft SQL Server, XCode, Interface Builder
         \end{onecolentry}
 
 
