@@ -20,6 +20,7 @@ jobs:
         with:
           files: |
             *_CV.pdf
-            *_CV.yaml
+            *_CV.tex
+            src/*_CV.yaml
           generate_release_notes: true
           make_latest: true
