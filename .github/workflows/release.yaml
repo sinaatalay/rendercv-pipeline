@@ -25,6 +25,5 @@ jobs:
           files: |
             *_CV.pdf
             *_CV.tex
-            src/*_CV.yaml
           generate_release_notes: true
           make_latest: true
