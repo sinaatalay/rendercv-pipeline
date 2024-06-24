@@ -1,4 +1,4 @@
-<!-- Remove below -->
+<!-- Remove below in src/markdown/Header.j2.md not in README.md -->
 
 # RenderCV Pipeline
 
@@ -14,14 +14,18 @@ Picture this:
 **How to start?**
 
 1.  [Click here](https://github.com/new?template_name=rendercv-pipeline&template_owner=sinaatalay) to create your CV repository based on this `rendercv-pipeline` template repository.
-2.  Edit `John_Doe_CV.yaml` file and push the changes. Then, see the magic happen.
+2.  Edit either
+    -  the `John_Doe_CV.yaml` file, or
+    -  the contents of `markdown` or `classic` directories
+    and push. Then, see the magic happen.
 
 **Some tips**
 
 1.  Learn more about [RenderCV](https://github.com/sinaatalay/rendercv) to understand what you can do with this tool.
 2.  Edit and preview your CV in your browser without installing anything by creating a codespace. Click the <> **Code** button, then click the **Codespaces** tab, and then click **Create codespace on main**. The environment will be ready for RenderCV usage.
+3.  Update `.vscode/launch.json` to point to your YAML file and press `F5` to run RenderCV in the browser.
 
-<!-- Remove above -->
+<!-- Remove above in src/markdown/Header.j2.md not in README.md -->
 # John Doe's CV
 
 - Phone: +90 541 999 99 99
