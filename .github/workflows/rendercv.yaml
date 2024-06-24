@@ -30,10 +30,10 @@ jobs:
           fi
           rendercv render $cv_file --pdf-path ../${cv_file%.yaml}.pdf --markdown-path ../README.md --latex-path ../${cv_file%.yaml}.tex
           cd ..
-          git add .
       - uses: dorny/paths-filter@v3
         id: changes
         with:
+          base: HEAD
           filters: |
             cv:
               - '*_CV.tex'
