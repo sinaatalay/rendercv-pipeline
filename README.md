@@ -17,6 +17,7 @@ Picture this:
 2.  Edit either
     -  the `src/John_Doe_CV.yaml` file, or
     -  the contents of `src/markdown` or `src/classic` directories
+    
     and push. Then, see the magic happen.
 
 **Some tips**
