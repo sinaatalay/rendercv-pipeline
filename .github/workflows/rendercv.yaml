@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_call: # to make the workflow triggerable from other workflows (release.yaml)
 
 permissions:
   contents: write

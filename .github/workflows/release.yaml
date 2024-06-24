@@ -9,6 +9,10 @@ permissions:
   contents: write
   
 jobs:
+  call_rendercv_workflow:
+    name: RenderCV
+    uses: ./.github/workflows/rendercv.yaml
+
   build:
     runs-on: ubuntu-latest
     steps:
