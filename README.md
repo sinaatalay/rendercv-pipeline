@@ -6,7 +6,7 @@ Are you ready to revolutionize the way you manage and craft your CVs and resumes
 
 Picture this:
 
-1.  You simply update your `John_Doe_CV.yaml` input file and push the changes.
+1.  You simply update your `src/John_Doe_CV.yaml` input file and push the changes.
 2.  Then, a pipeline generates a new PDF and Markdown from it and uploads it to the repository.
 3.  When you are done with your work, you can create a new release on GitHub, tagging your CV with something like `v2024.04`. The pipeline will automatically add the PDF and its $\LaTeX$ source as assets to the release.
 4.  You have successfully created your CV pipeline, and all the history is in safe hands and reproducible.
@@ -15,8 +15,8 @@ Picture this:
 
 1.  [Click here](https://github.com/new?template_name=rendercv-pipeline&template_owner=sinaatalay) to create your CV repository based on this `rendercv-pipeline` template repository.
 2.  Edit either
-    -  the `John_Doe_CV.yaml` file, or
-    -  the contents of `markdown` or `classic` directories
+    -  the `src/John_Doe_CV.yaml` file, or
+    -  the contents of `src/markdown` or `src/classic` directories
     and push. Then, see the magic happen.
 
 **Some tips**
