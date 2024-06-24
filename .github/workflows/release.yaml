@@ -14,6 +14,7 @@ jobs:
     uses: ./.github/workflows/rendercv.yaml
 
   build:
+    needs: call_rendercv_workflow
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
