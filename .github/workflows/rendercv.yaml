@@ -29,8 +29,13 @@ jobs:
             echo "No RenderCV file found!"
             exit 1
           fi
-          rendercv render $cv_file --pdf-path ../${cv_file%.yaml}.pdf --markdown-path ../README.md --latex-path ../${cv_file%.yaml}.tex
           cd ..
+          rendercv render src/$cv_file --pdf-path ${cv_file%.yaml}.pdf --markdown-path README.md --latex-path ${cv_file%.yaml}.tex
+      - name: Upload rendercv_output as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RenderCV Output
+          path: rendercv_output
       - uses: dorny/paths-filter@v3
         id: changes
         with:
@@ -47,9 +52,3 @@ jobs:
           git add -A
           git commit -m "render the latest CV"
           git push
-      - name: Upload rendercv_output as an artifact
-        if: steps.changes.outputs.cv == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: RenderCV Output
-          path: rendercv_output
