@@ -37,7 +37,7 @@ Picture this:
 - GitHub: [yourusername](https://github.com/yourusername)
 
 
-# Welcome To RenderCV!
+# Welcome to RenderCV!
 
 [RenderCV](https://github.com/sinaatalay/rendercv) is a LaTeX-based CV/resume framework. It allows you to create a high-quality CV or resume as a PDF file from a YAML file, with **full Markdown syntax support** and **complete control over the LaTeX code**.
 
@@ -116,7 +116,7 @@ The boilerplate content is taken from [here](https://github.com/dnl-blkv/mcdowel
 - Developed a UNIX-style OS with a scheduler, file system, text editor, and calculator
 - Tools Used: C
 
-# Additional Experience And Awards
+# Additional Experience and Awards
 
 - Instructor (2003-2005): Taught 2 full-credit computer science courses
 - Third Prize, Senior Design Project: Awarded 3rd prize for a synchronized calendar project out of 100 entries
