@@ -1,1 +1,1 @@
-rendercv@git+https://github.com/sinaatalay/rendercv
+rendercv==1.12
