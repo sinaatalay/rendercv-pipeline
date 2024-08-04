@@ -1,1 +1,1 @@
-rendercv==1.12
+rendercv==1.13
